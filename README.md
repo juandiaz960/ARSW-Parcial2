@@ -1,5 +1,57 @@
 # Escuela Colombiana de Ingeniería Julio Garavito - Arquitecturas de Software ARSW - Parcial Segundo Tercio
 
+## Instalación y ejecución del proyecto
+
+### Comenzando
+
+Para comenzar, clona el repositorio en alguna carpeta local usando el siguiente comando:
+
+```
+git clone https://github.com/juandiaz960/ARSW-Parcial2.git
+```
+
+### Requisitos
+
+* Java jdk > 8
+* Maven (Apache Maven)
+* Git
+
+### Instalar
+
+Para compilar el proyecto, utiliza el siguiente comando:
+
+```
+mvn clean compile
+```
+
+Para generación de la documentación de la aplicación (opcional):
+
+```
+mvn javadoc:javadoc
+```
+
+### Ejecución
+
+Ejecuta el siguiente comando despues de la compilación:
+
+```
+mvn spring-boot:run
+```
+
+Ya estará corriendo el servicio, en el navegador pede acceder por medio de la siguiente dirección:
+```
+http://localhost:8080/
+```
+
+## Diseño
+
+La aplicación tiene una arquitectura cliente-servidor, esta distribuida en varios paquetes bajo la premisa de la inyección de paquetes. La base es una aplicación REST, la cual consume un API de un proveedor externo y se organiza en un componente web, la capa de servicios se encarga de la lógica de la aplicación y el controlador permite hacer el GET respectivo para mostrar los datos, que estan conectados a un componente front-end escrito en HTML y manejado por medio de JavaScript. El proyecto es fácilmente extensible debido a la capacidad de agregar servicios con las anotaciones que ofrece SpringBoot, y asu vez podría consumir la API de otro proveedor solamente cambiando la dirección a donde éste esta apuntando.
+
+## Despliegue en Heroku
+
+[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://diazsalamanca-arsw-t2.herokuapp.com/)
+
+
 ## Preparación para el Parcial
 
 Con el objetivo de preparar el examen final del segundo tercio, por favor siga las siguientes instrucciones.
